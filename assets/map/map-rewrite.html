@@ -29,12 +29,7 @@
         width: 100%;
       }
       .infoContainer {
-        position: absolute;
-        left: 4%;
         height: auto;
-        top: 0%;
-        width: 47%;
-        z-index: 10;
       }
       .info {
         position: relative;
@@ -107,7 +102,6 @@
   </head>
 
   <body
-    id="map"
     style="
       display: table;
       background-color: #000000;
@@ -115,7 +109,8 @@
       height: 100%;
     "
   >
-    <div
+    <div id="map"></div>
+    <!-- <div
       class="infoContainer hide"
       style="display: table-cell; vertical-align: middle"
     >
@@ -139,7 +134,7 @@
         </div>
       </div>
       <div class="tab"></div>
-    </div>
+    </div> -->
 
     <script>
       mapboxgl.accessToken =
@@ -149,9 +144,11 @@
         style: 'mapbox://styles/mapbox/dark-v11',
         maxZoom: 15,
         minZoom: 10,
+        zoom: 13,
         attributionControl: false,
         dragPan: false,
         dragRotate: false,
+        center: [-84.3823650496807, 33.763086324044885],
       });
 
       /*
@@ -181,7 +178,8 @@
       var markerOnMap = false;
       var markerLatLng;
       var markers = [];
-      var markersForGroup = [];
+      var width = 20; //marker dimensions
+      var height = 20;
       var group;
       var minLat = 0;
       var minLng = 0;
@@ -197,16 +195,6 @@
         'info-title-paragraph'
       )[0];
       var infoImage = document.getElementsByClassName('info-image')[0];
-      var mapIcon = L.icon({
-        iconUrl: 'img/pin.png',
-        iconSize: [20, 20], // size of the icon
-      });
-
-      function addMarkerNew(title) {
-        //markers.push();
-        infoBox.className = 'infoContainer';
-        infoTitle.innerHTML = title;
-      }
 
       function addMarker(mark, lat, lng) {
         if (minLng == 0) {
@@ -233,34 +221,44 @@
           maxLat = lat;
         }
 
-        var southWest = L.latLng(minLat, minLng),
-          northEast = L.latLng(maxLat, maxLng);
-        var bottomLeft = L.latLng(minLat - 0.09, minLng - 0.09),
-          topRight = L.latLng(maxLat + 0.09, maxLng + 0.09);
-        bounds = L.latLngBounds(southWest, northEast);
-        maxBounds = L.latLngBounds(bottomLeft, topRight);
+        var southWest = new mapboxgl.LngLat(minLng, minLat),
+          northEast = new mapboxgl.LngLat(maxLng, maxLat);
+        var bottomLeft = new mapboxgl.LngLat(minLng - 0.09, minLat - 0.09),
+          topRight = new mapboxgl.LngLat(maxLng + 0.09, maxLat + 0.09);
+        bounds = new mapboxgl.LngLatBounds(southWest, northEast);
+        maxBounds = new mapboxgl.LngLatBounds(bottomLeft, topRight);
 
         map.fitBounds(bounds);
         map.setMaxBounds(maxBounds);
 
         markerOnMap = true;
-        marker = L.marker(new L.LatLng(lat, lng), {
+        const el = document.createElement('div');
+        el.className = 'marker';
+        el.style.backgroundImage = `url(./img/pin.png)`;
+        el.style.width = `${width}px`;
+        el.style.height = `${height}px`;
+        el.style.backgroundSize = '100%';
+        marker = new mapboxgl.Marker(el).setLngLat([lng, lat]);
+        /* {
           icon: mapIcon,
           draggable: false,
-        });
+        });*/
 
         var m = { latitude: lat, longitude: lng, id: mark };
         //console.log('creating marker');
         markers[mark] = m;
-        markersForGroup.push(marker);
         //console.log("markers: " + markers[marker].id);
 
-        marker.on('click', function () {
-          infoBox.className = 'infoContainer hide';
-          centerToMarker(this.getLatLng().lat, this.getLatLng().lng);
-          map.setView(this.getLatLng());
-          sendActive();
-        });
+        var popup = new mapboxgl.Popup('infoContainer');
+        markers[mark].popup = popup;
+        popup.setText('Testing');
+        // marker.on('click', function () {
+        //   infoBox.className = 'infoContainer hide';
+        //   centerToMarker(this.getLngLat().lng, this.getLngLat().lat);
+        //   map.setCenter(this.getLngLat());
+        //   sendActive();
+        // });
+        marker.setPopup(popup);
 
         window.document.title = getLat() + ',' + getLng();
 
@@ -271,7 +269,7 @@
         document.location = '?moved=true';
       }
 
-      function centerToMarker(mLat, mLong) {
+      function centerToMarker(mLong, mLat) {
         //console.log("Number of markers: " + markers);
         infoDescription.innerHTML = markers.length;
         for (var mk in markers) {
@@ -346,13 +344,13 @@
         }
       }
 
-      function selectMarker() {
-        setTimeout(function () {
-          infoBox.className = 'infoContainer';
-        }, 1000);
-        map.setZoom(9);
-        setMarkerInfo();
-      }
+      // function selectMarker() {
+      //   setTimeout(function () {
+      //     infoBox.className = 'infoContainer';
+      //   }, 1000);
+      //   map.setZoom(9);
+      //   setMarkerInfo();
+      // }
 
       function createObjectURL(object) {
         return window.URL
@@ -363,11 +361,9 @@
       function setMarkerInfo() {}
 
       function loadMap(token, style) {
-        L.mapbox
-          .styleLayer(
-            'mapbox://styles/terraincognita/cih3xl6c5001790m3fku5blh9'
-          )
-          .addTo(map);
+        map.setStyle(
+          'mapbox://styles/terraincognita/cih3xl6c5001790m3fku5blh9'
+        );
         map.on('mousemove', function () {
           sendActive();
         });
@@ -380,11 +376,11 @@
       }
 
       function getLat() {
-        return marker.getLatLng().lat.toString();
+        return marker.getLngLat().lat;
       }
 
       function getLng() {
-        return marker.getLatLng().lng.toString();
+        return marker.getLngLat().lng;
       }
     </script>
   </body>
