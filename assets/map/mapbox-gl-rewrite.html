@@ -146,7 +146,6 @@
         minZoom: 10,
         zoom: 13,
         attributionControl: false,
-        dragPan: false,
         dragRotate: false,
         center: [-84.3823650496807, 33.763086324044885],
       });
@@ -229,7 +228,7 @@
         maxBounds = new mapboxgl.LngLatBounds(bottomLeft, topRight);
 
         map.fitBounds(bounds);
-        map.setMaxBounds(maxBounds);
+        // map.setMaxBounds(maxBounds);
 
         markerOnMap = true;
         const el = document.createElement('div');
