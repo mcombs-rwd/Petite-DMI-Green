@@ -7,18 +7,6 @@
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style>
       ::webkit-scrollbar {
@@ -109,6 +97,18 @@
       .hide {
         display: none !important;
       }
+
+      .marker-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .marker {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+      }
     </style>
   </head>
 
@@ -117,11 +117,13 @@
     style="
       display: table;
       background-size: cover;
+      background-image: url('img/map-bounds.png');
       background-color: #000000;
       cursor: none;
       height: 100%;
     "
   >
+    <div class="marker-container"></div>
     <div
       class="infoContainer hide"
       style="display: table-cell; vertical-align: middle"
@@ -149,237 +151,70 @@
     </div>
 
     <script>
-      var map = new L.Map('map', {
-        center: [0, 0],
-        zoom: 11,
-        attributionControl: false,
-        zoomControl: false,
-        dragging: false,
-        scrollWheelZoom: false,
-        touchZoom: false,
-      });
-
-      function empty() {
-        infoBox.className = 'infoContainer hide';
-      }
-
-      // Construct a bounding box for this map that the user cannot
-      // move out of
-      var markerOnMap = false;
-      var markerLatLng;
-      var markers = [];
-      var markersForGroup = [];
-      var group;
-      var minLat = 0;
-      var minLng = 0;
-      var maxLat = 0;
-      var maxLng = 0;
-      var marker;
-      var bounds;
-      var maxBounds;
-      var infoBox = document.getElementsByClassName('infoContainer')[0];
-      var infoDescription = document.getElementsByClassName('paragraph')[0];
-      var infoCaption = document.getElementsByClassName('caption')[0];
-      var infoTitle = document.getElementsByClassName(
-        'info-title-paragraph'
-      )[0];
-      var infoImage = document.getElementsByClassName('info-image')[0];
-      var mapIcon = L.icon({
-        iconUrl: 'img/pin.png',
-        iconSize: [20, 20], // size of the icon
-      });
-      var imgURL = 'img/map-hd.png';
-      var imgBounds = [
-        [33.72454, -84.46476],
-        [33.8016, -84.29996],
-      ];
-      L.imageOverlay(imgURL, imgBounds).addTo(map);
-      map.fitBounds(imgBounds);
-
-      function addMarkerNew(title) {
-        //markers.push();
-        infoBox.className = 'infoContainer';
-        infoTitle.innerHTML = title;
-      }
+      var markerContainer =
+        document.getElementsByClassName('marker-container')[0];
 
       function addMarker(mark, lat, lng) {
-        // if (minLng == 0) {
-        //   minLng = lng;
-        // } else if (minLng > lng) {
-        //   minLng = lng;
-        // }
-
-        // if (maxLng == 0) {
-        //   maxLng = lng;
-        // } else if (maxLng < lng) {
-        //   maxLng = lng;
-        // }
-
-        // if (minLat == 0) {
-        //   minLat = lat;
-        // } else if (minLat > lat) {
-        //   minLat = lat;
-        // }
-
-        // if (maxLat == 0) {
-        //   maxLat = lat;
-        // } else if (maxLat < lat) {
-        //   maxLat = lat;
-        // }
-
-        // var southWest = L.latLng(minLat, minLng),
-        //   northEast = L.latLng(maxLat, maxLng);
-        // var bottomLeft = L.latLng(minLat - 0.09, minLng - 0.09),
-        //   topRight = L.latLng(maxLat + 0.09, maxLng + 0.09);
-        // bounds = L.latLngBounds(southWest, northEast);
-        // maxBounds = L.latLngBounds(bottomLeft, topRight);
-
-        // map.fitBounds(bounds);
-        // map.setMaxBounds(maxBounds);
-
-        markerOnMap = true;
-        marker = L.marker([lat, lng], {
-          icon: mapIcon,
-          draggable: false,
-        });
-
-        var m = { latitude: lat, longitude: lng, id: mark };
-        //console.log('creating marker');
-        markers[mark] = m;
-        markersForGroup.push(marker);
-        //console.log("markers: " + markers[marker].id);
-
-        marker.on('click', function () {
-          infoBox.className = 'infoContainer hide';
-          centerToMarker(this.getLatLng().lat, this.getLatLng().lng);
-          map.setView(this.getLatLng());
-          sendActive();
-        });
-
-        window.document.title = getLat() + ',' + getLng();
-
-        marker.addTo(map);
-      }
-
-      function sendActive() {
-        document.location = '?moved=true';
-      }
-
-      function centerToMarker(mLat, mLong) {
-        //console.log("Number of markers: " + markers);
-        infoDescription.innerHTML = markers.length;
-        for (var mk in markers) {
-          if (markers[mk].latitude == mLat && markers[mk].longitude == mLong) {
-            fixInfoBox(mk);
-          }
+        var marker = document.createElement('div');
+        marker.className = 'marker';
+        marker.style.backgroundImage = "url('img/pin.png')";
+        switch (mark) {
+          case 0:
+            marker.style.transform =
+              'translate(518px,1055px) translate(-50%,-50%) translate(0px,0px)';
+            break;
+          case 1:
+            marker.style.transform =
+              'translate(1063px,328px) translate(-50%,-50%) translate(0px,0px)';
+            break;
+          case 2:
+            marker.style.transform =
+              'translate(1077px,514px) translate(-50%,-50%) translate(0px,0px)';
+            break;
+          case 3:
+            marker.style.transform =
+              'translate(1113px,157px) translate(-50%,-50%) translate(0px,0px)';
+            break;
+          case 4:
+            marker.style.transform =
+              'translate(966px,160px) translate(-50%,-50%) translate(0px,0px)';
+            break;
+          case 5:
+            marker.style.transform =
+              'translate(1222px,110px) translate(-50%,-50%) translate(0px,0px)';
+            break;
         }
+
+        markerContainer.appendChild(marker);
       }
 
-      function closeInfo(e) {
-        //console.log("Close Selected");
-        infoBox.className = 'infoContainer hide';
-      }
+      function sendActive() {}
 
-      function reset() {
-        // map.fitBounds(bounds);
-        infoBox.className = 'infoContainer hide';
-      }
+      function centerToMarker(mLat, mLong) {}
 
-      function fixInfoBox(m) {
-        infoDescription.innerHTML = markers[m].description;
-        infoTitle.innerHTML = markers[m].t;
-        infoCaption.innerHTML = '<i>' + markers[m].caption + '</i>';
-        //var src = createObjectURL(markers[m].image);
-        /*var img = new Image();
-      img.src = markers[m].image;
-      infoImage.appendChild(img);
-      */
-        infoImage.style.backgroundImage = "url('" + markers[m].image + "')";
-        setTimeout(function () {
-          infoBox.className = 'infoContainer';
-          //console.log("Window height; " + $(window).height());
-          //console.log("Container height; " + $('.infoContainer').height());
-          var temp =
-            $(window).height() / 2 - $('.infoContainer').height() / 2 - 20;
-          $('.infoContainer').css('top', temp + 'px');
-          //console.log("temp : " + temp);
-        }, 700);
-      }
+      function closeInfo(e) {}
 
-      function addImage(mark, img) {
-        for (var mk in markers) {
-          if (markers[mk].id == mark) {
-            markers[mk].image = 'file://' + img;
-            //console.log("Adding image to marker: " + markers[mk].id)
-          }
-        }
-      }
+      function reset() {}
 
-      function addTitle(mark, title) {
-        for (var mk in markers) {
-          if (markers[mk].id == mark) {
-            markers[mk].t = title;
-            //console.log("Adding title to marker: " + markers[mk].id)
-          }
-        }
-      }
+      function fixInfoBox(m) {}
 
-      function addInfo(mark, inform) {
-        for (var mk in markers) {
-          if (markers[mk].id == mark) {
-            markers[mk].description = inform;
-          }
-        }
-      }
+      function addImage(mark, img) {}
 
-      function addCaption(mark, caption) {
-        for (var mk in markers) {
-          if (markers[mk].id == mark) {
-            markers[mk].caption = caption;
-          }
-        }
-      }
+      function addTitle(mark, title) {}
 
-      function selectMarker() {
-        setTimeout(function () {
-          infoBox.className = 'infoContainer';
-        }, 1000);
-        map.setZoom(9);
-        setMarkerInfo();
-      }
+      function addInfo(mark, inform) {}
 
-      function createObjectURL(object) {
-        return window.URL
-          ? window.URL.createObjectURL(object)
-          : window.webkitURL.createObjectURL(object);
-      }
+      function selectMarker() {}
 
-      function setMarkerInfo() {}
+      function createObjectURL(object) {}
 
-      function loadMap(token, style) {
-        L.mapbox
-          .styleLayer(
-            'mapbox://styles/terraincognita/cih3xl6c5001790m3fku5blh9'
-          )
-          .addTo(map);
-        map.on('mousemove', function () {
-          sendActive();
-        });
-      }
+      function loadMap(token, style) {}
 
-      function removeMarker() {
-        markerOnMap = false;
-        map.removeLayer(marker);
-        window.document.title = 'null';
-      }
+      function removeMarker() {}
 
-      function getLat() {
-        return marker.getLatLng().lat.toString();
-      }
+      function getLat() {}
 
-      function getLng() {
-        return marker.getLatLng().lng.toString();
-      }
+      function getLng() {}
     </script>
   </body>
 </html>
