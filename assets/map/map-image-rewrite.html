@@ -22,8 +22,8 @@
         bottom: 0;
         width: 100%;
       }
-      .infoContainer {
-        position: absolute;
+      .info-container {
+        position: relative;
         left: 4%;
         height: auto;
         top: 0%;
@@ -125,7 +125,7 @@
   >
     <div class="marker-container"></div>
     <div
-      class="infoContainer hide"
+      class="info-container hide"
       style="display: table-cell; vertical-align: middle"
     >
       <div class="info">
@@ -144,7 +144,7 @@
             </p>
             <p class="caption"></p>
           </div>
-          <div class="info-close" onmousedown="closeInfo()">CLOSE</div>
+          <div class="info-close" onmousedown="closeInfo(this)">CLOSE</div>
         </div>
       </div>
       <div class="tab"></div>
@@ -153,6 +153,7 @@
     <script>
       var markerContainer =
         document.getElementsByClassName('marker-container')[0];
+      var marks = [];
 
       function addMarker(mark, lat, lng) {
         var marker = document.createElement('div');
@@ -185,16 +186,51 @@
             break;
         }
 
+        infoContainer = buildInfoBox();
+        marker.appendChild(infoContainer);
+
+        marker.onclick = function () {
+          infoContainer.className = 'info-container';
+        };
+        mark = { marker: marker, infoBox: infoContainer };
+        marks.push(mark);
         markerContainer.appendChild(marker);
+      }
+
+      function buildInfoBox() {
+        var infoContainerNode = document.createElement('div');
+        infoContainerNode.className = 'info-container hide';
+        infoContainerNode.style.display = 'table-cell';
+        infoContainerNode.style.verticalAlign = 'middle';
+        var infoNode = document.createElement('div');
+        infoNode.className = 'info';
+        infoContainerNode.appendChild(infoNode);
+        var infoImgNode = document.createElement('div');
+        infoImgNode.className = 'info-image';
+        var infoTextNode = document.createElement('div');
+        infoTextNode.className = 'info-text';
+        var infoTitleNode = document.createElement('div');
+        infoTitleNode.className = 'info-title';
+        var infoTitlePNode = document.createElement('h3');
+        infoTitlePNode.className = 'info-title-paragraph';
+        var infoNode = document.createElement('div');
+
+        return infoContainerNode;
       }
 
       function sendActive() {}
 
       function centerToMarker(mLat, mLong) {}
 
-      function closeInfo(e) {}
+      function closeInfo(e) {
+        e.className = 'info-container hide';
+      }
 
-      function reset() {}
+      function reset() {
+        marks.forEach((mark) => {
+          mark.infoContainer.className = 'info-container hide';
+        });
+      }
 
       function fixInfoBox(m) {}
 
