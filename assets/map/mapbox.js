@@ -1,16 +1,37 @@
 document.addEventListener('DOMContentLoaded', function () {
-  infoArray = Array.from(
-    document.getElementsByClassName('info-container')
-  );
-  markers = document.querySelectorAll('marker');
+  /**
+   * Hides info-containers and makes markers clickable.
+   */
+  popups = document.querySelectorAll('.info-container')
+  markers = document.querySelectorAll('.marker');
+  var titles = [];
+  popups.forEach((popup) => {
+    popup.className = "info-container hide";
+    title = popup.querySelector("h3").innerHTML;
+    title = title.toLowerCase()
+      .replace(/[\'\’]/g, "").replace(/[^\w]|_/g, "-").replace(/\s+/g, " ");
+    popup.id = title;
+    titles.push(title);
+  })
+  console.log("Popups: ", titles);
+  var n = 0;
+  markers.forEach((marker) => {
+    marker.id = "click-" + titles[n];
+    functionCall = "openInfo('" + titles[n] + "')";
+    marker.setAttribute("onClick", functionCall);
+    console.log("Marker call: %s", functionCall);
+    n++;
+  })
 });
 
 function openInfo(event) {
-  document.getElementById(event.data.id).className = 'info-container';
+  // TODO: Clicking marker should toggle element visibility
+  console.log("opening %s", event);
+  document.getElementById(event).className = "info-container";
 }
 
 function openAll() {
-  infoArray.forEach((container) => {
+  popups.forEach((container) => {
     container.className = 'info-container';
   });
 }
@@ -34,7 +55,7 @@ function closeInfo(ev) {
 }
 
 function reset() {
-  infoArray.forEach((container) => {
+  popups.forEach((container) => {
     container.className = 'info-container hide';
   });
 }
