@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>null</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css"
+      rel="stylesheet"
+    />
+    <style>
+      ::webkit-scrollbar {
+        display: none;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .infoContainer {
+        position: absolute;
+        left: 4%;
+        height: auto;
+        top: 0%;
+        width: 47%;
+        z-index: 10;
+      }
+      .info {
+        position: relative;
+        height: auto;
+        width: 93%;
+        background-color: #edeae6;
+        border-radius: 10px;
+        float: left;
+      }
+      .tab {
+        position: absolute;
+        height: 40px;
+        width: 20px;
+        top: 48%;
+        border-left: 20px solid #edeae6;
+        border-bottom: 20px solid transparent;
+        border-top: 20px solid transparent;
+        float: left;
+        margin: 0 auto;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .info-image {
+        border-radius: 10px 10px 0px 0px;
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        float: left;
+        background-position: center;
+      }
+
+      .info-text {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 2%;
+        height: 60%;
+        float: left;
+        overflow: hidden;
+      }
+      .info-close {
+        position: relative;
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .info-title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .info-description {
+        position: relative;
+        width: 100%;
+        height: 65%;
+        font-size: 12px;
+        overflow-y: hidden;
+      }
+      .hide {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body
+    id="map"
+    style="
+      display: table;
+      background-image: url('img/map-bounds.png');
+      background-size: cover;
+      background-color: #000000;
+      cursor: none;
+      height: 100%;
+    "
+  >
+    <div
+      class="infoContainer hide"
+      style="display: table-cell; vertical-align: middle"
+    >
+      <div class="info">
+        <div class="info-image"></div>
+        <div class="info-text">
+          <div class="info-title">
+            <h3 class="info-title-paragraph">Title</h3>
+          </div>
+          <div class="info-description">
+            <p class="paragraph">
+              During hot 19th-century summers, Atlantans flocked to Ponce de
+              Leon Springs. In 1926, the Sears, Roebuck & Co. built a
+              distribution center on the site. Today, the Historic Old Fourth
+              Ward Park provides public green space just blocks south of the
+              once-rural site.
+            </p>
+            <p class="caption"></p>
+          </div>
+          <div class="info-close" onmousedown="closeInfo()">CLOSE</div>
+        </div>
+      </div>
+      <div class="tab"></div>
+    </div>
+
+    <script>
+      L.mapbox.accessToken =
+        'pk.eyJ1IjoidGVycmFpbmNvZ25pdGEiLCJhIjoiS3FCYi1kUSJ9.tF9nykTfQrO-e9BsYbJrRQ';
+      var map = L.mapbox.map('map', 'mapbox.dark', {
+        // set that bounding box as maxBounds to restrict moving the map
+        // see full maxBounds documentation:
+        // http://leafletjs.com/reference.html#map-maxbounds
+        zoomControl: false,
+        maxZoom: 15,
+        minZoom: 10,
+        attribution: false,
+      });
+
+      map.on('drag', empty);
+
+      /* 
+setTimeout(function() {
+    addMarker(0, 33.77226, -84.36618);
+    addImage(0, 'img/pin.png');
+    addTitle(0, 'Title 1');
+    addInfo(0, 'DESCRIPTION 1');
+    setTimeout(function() {
+        addMarker(1, 33.78226, -84.36618);
+        addImage(1, 'img/pin.png');
+        addTitle(1, 'Title 2');
+        addInfo(1, 'Description that contains &quot;');
+    }, 3000);
+    setTimeout(function() {
+        reset();
+    }, 10000);
+}, 3000);
+/* */
+
+      function empty() {
+        infoBox.className = 'infoContainer hide';
+      }
+
+      // Construct a bounding box for this map that the user cannot
+      // move out of
+      var markerOnMap = false;
+      var markerLatLng;
+      var markers = [];
+      var markersForGroup = [];
+      var group;
+      var minLat = 0;
+      var minLng = 0;
+      var maxLat = 0;
+      var maxLng = 0;
+      var marker;
+      var bounds;
+      var maxBounds;
+      var infoBox = document.getElementsByClassName('infoContainer')[0];
+      var infoDescription = document.getElementsByClassName('paragraph')[0];
+      var infoCaption = document.getElementsByClassName('caption')[0];
+      var infoTitle = document.getElementsByClassName(
+        'info-title-paragraph'
+      )[0];
+      var infoImage = document.getElementsByClassName('info-image')[0];
+      var mapIcon = L.icon({
+        iconUrl: 'img/pin.png',
+        iconSize: [20, 20], // size of the icon
+      });
+
+      function addMarkerNew(title) {
+        //markers.push();
+        infoBox.className = 'infoContainer';
+        infoTitle.innerHTML = title;
+      }
+
+      function addMarker(mark, lat, lng) {
+        if (minLng == 0) {
+          minLng = lng;
+        } else if (minLng > lng) {
+          minLng = lng;
+        }
+
+        if (maxLng == 0) {
+          maxLng = lng;
+        } else if (maxLng < lng) {
+          maxLng = lng;
+        }
+
+        if (minLat == 0) {
+          minLat = lat;
+        } else if (minLat > lat) {
+          minLat = lat;
+        }
+
+        if (maxLat == 0) {
+          maxLat = lat;
+        } else if (maxLat < lat) {
+          maxLat = lat;
+        }
+
+        var southWest = L.latLng(minLat, minLng),
+          northEast = L.latLng(maxLat, maxLng);
+        var bottomLeft = L.latLng(minLat - 0.09, minLng - 0.09),
+          topRight = L.latLng(maxLat + 0.09, maxLng + 0.09);
+        bounds = L.latLngBounds(southWest, northEast);
+        maxBounds = L.latLngBounds(bottomLeft, topRight);
+
+        map.fitBounds(bounds);
+        map.setMaxBounds(maxBounds);
+
+        markerOnMap = true;
+        marker = L.marker(new L.LatLng(lat, lng), {
+          icon: mapIcon,
+          draggable: false,
+        });
+
+        var m = { latitude: lat, longitude: lng, id: mark };
+        //console.log('creating marker');
+        markers[mark] = m;
+        markersForGroup.push(marker);
+        //console.log("markers: " + markers[marker].id);
+
+        marker.on('click', function () {
+          infoBox.className = 'infoContainer hide';
+          centerToMarker(this.getLatLng().lat, this.getLatLng().lng);
+          map.setView(this.getLatLng());
+          sendActive();
+        });
+
+        window.document.title = getLat() + ',' + getLng();
+
+        marker.addTo(map);
+      }
+
+      function sendActive() {
+        // document.location = ("?moved=true");
+      }
+
+      function centerToMarker(mLat, mLong) {
+        //console.log("Number of markers: " + markers);
+        infoDescription.innerHTML = markers.length;
+        for (var mk in markers) {
+          if (markers[mk].latitude == mLat && markers[mk].longitude == mLong) {
+            fixInfoBox(mk);
+          }
+        }
+      }
+
+      function closeInfo(e) {
+        //console.log("Close Selected");
+        infoBox.className = 'infoContainer hide';
+      }
+
+      function reset() {
+        map.fitBounds(bounds);
+        infoBox.className = 'infoContainer hide';
+      }
+
+      function fixInfoBox(m) {
+        infoDescription.innerHTML = markers[m].description;
+        infoTitle.innerHTML = markers[m].t;
+        infoCaption.innerHTML = '<i>' + markers[m].caption + '</i>';
+        //var src = createObjectURL(markers[m].image);
+        /*var img = new Image();
+    img.src = markers[m].image;
+    infoImage.appendChild(img);
+    */
+        infoImage.style.backgroundImage = "url('" + markers[m].image + "')";
+        setTimeout(function () {
+          infoBox.className = 'infoContainer';
+          //console.log("Window height; " + $(window).height());
+          //console.log("Container height; " + $('.infoContainer').height());
+          var temp =
+            $(window).height() / 2 - $('.infoContainer').height() / 2 - 20;
+          $('.infoContainer').css('top', temp + 'px');
+          //console.log("temp : " + temp);
+        }, 700);
+      }
+
+      function addImage(mark, img) {
+        for (var mk in markers) {
+          if (markers[mk].id == mark) {
+            markers[mk].image = 'file://' + img;
+            //console.log("Adding image to marker: " + markers[mk].id)
+          }
+        }
+      }
+
+      function addTitle(mark, title) {
+        for (var mk in markers) {
+          if (markers[mk].id == mark) {
+            markers[mk].t = title;
+            //console.log("Adding title to marker: " + markers[mk].id)
+          }
+        }
+      }
+
+      function addInfo(mark, inform) {
+        for (var mk in markers) {
+          if (markers[mk].id == mark) {
+            markers[mk].description = inform;
+          }
+        }
+      }
+
+      function addCaption(mark, caption) {
+        for (var mk in markers) {
+          if (markers[mk].id == mark) {
+            markers[mk].caption = caption;
+          }
+        }
+      }
+
+      function selectMarker() {
+        setTimeout(function () {
+          infoBox.className = 'infoContainer';
+        }, 1000);
+        map.setZoom(9);
+        setMarkerInfo();
+      }
+
+      function createObjectURL(object) {
+        return window.URL
+          ? window.URL.createObjectURL(object)
+          : window.webkitURL.createObjectURL(object);
+      }
+
+      function setMarkerInfo() {}
+
+      function loadMap(token, style) {
+        L.mapbox
+          .styleLayer(
+            'mapbox://styles/terraincognita/cih3xl6c5001790m3fku5blh9'
+          )
+          .addTo(map);
+        map.on('mousemove', function () {
+          sendActive();
+        });
+      }
+
+      function removeMarker() {
+        markerOnMap = false;
+        map.removeLayer(marker);
+        window.document.title = 'null';
+      }
+
+      function getLat() {
+        return marker.getLatLng().lat.toString();
+      }
+
+      function getLng() {
+        return marker.getLatLng().lng.toString();
+      }
+    </script>
+  </body>
+</html>

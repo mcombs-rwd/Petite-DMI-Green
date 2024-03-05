@@ -1,0 +1,10 @@
+# AIR code we won't touch
+META-INF/
+mimetype
+Petite DMI - Green.swf
+Petite DMI - Green.exe
+assets/swf/
+assets/map/img/
+
+# VSC
+*.code-workspace

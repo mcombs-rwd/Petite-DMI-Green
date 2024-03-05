@@ -1,0 +1,806 @@
+{
+  "destinationID": "3",
+  "stories": [
+    {
+      "backgroundUrl" : "/assets/neighborhood_title.jpg",
+      "backgroundQuestion" : "What neighborhood are you?",
+      "storyID": "2345",
+      "storyProps": {},
+      "type": "outcomeQuiz",
+      "title": "Neighborhood Personality Test",
+      "thumbUrl": "/assets/neighborhood_title.jpg",
+      "buttonLabelSartQuiz": "Start Test",
+      "buttonLabelNextQuestion": "Next Question",
+      "currentQuestionIndicatorText": "Question [current] of [total]",
+      "resultsHeading": "Your Atlanta neighborhood is",
+      "outcomeOptions": [
+        {
+          "value": "1",
+          "label": "Doraville"
+        },
+        {
+          "value": "2",
+          "label": "Buckhead"
+        },
+        {
+          "value": "3",
+          "label": "Inman Park/Little Five Points"
+        },
+        {
+          "value": "4",
+          "label": "Midtown"
+        }
+      ],
+      "slides": [
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "title",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/neighborhood_title.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/neighborhood_title.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/neighborhood_title.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/neighborhood_title.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/neighborhood_title.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizQuestion",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "How do you like to get around?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "outcomeOptionValue": "1",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Public Transportation",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/transportation_public.png"
+                },
+                "_1500w": {
+                  "url": "/assets/transportation_public.png"
+                },
+                "_750w": {
+                  "url": "/assets/transportation_public.png"
+                },
+                "_500w": {
+                  "url": "/assets/transportation_public.png"
+                },
+                "_300w": {
+                  "url": "/assets/transportation_public.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "outcomeOptionValue": "2",
+              "assetType": "image",
+              "caption": "Car",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/transportation_car.png"
+                },
+                "_1500w": {
+                  "url": "/assets/transportation_car.png"
+                },
+                "_750w": {
+                  "url": "/assets/transportation_car.png"
+                },
+                "_500w": {
+                  "url": "/assets/transportation_car.png"
+                },
+                "_300w": {
+                  "url": "/assets/transportation_car.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "outcomeOptionValue": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Bike",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/transportation_bike.png"
+                },
+                "_1500w": {
+                  "url": "/assets/transportation_bike.png"
+                },
+                "_750w": {
+                  "url": "/assets/transportation_bike.png"
+                },
+                "_500w": {
+                  "url": "/assets/transportation_bike.png"
+                },
+                "_300w": {
+                  "url": "/assets/transportation_bike.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "outcomeOptionValue": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Walk",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/transportation_walk.png"
+                },
+                "_1500w": {
+                  "url": "/assets/transportation_walk.png"
+                },
+                "_750w": {
+                  "url": "/assets/transportation_walk.png"
+                },
+                "_500w": {
+                  "url": "/assets/transportation_walk.png"
+                },
+                "_300w": {
+                  "url": "/assets/transportation_walk.png"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizQuestion",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "What do you like most about Atlanta?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "outcomeOptionValue": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Urban Art Scene",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/like_urbanart.png"
+                },
+                "_1500w": {
+                  "url": "/assets/like_urbanart.png"
+                },
+                "_750w": {
+                  "url": "/assets/like_urbanart.png"
+                },
+                "_500w": {
+                  "url": "/assets/like_urbanart.png"
+                },
+                "_300w": {
+                  "url": "/assets/like_urbanart.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "outcomeOptionValue": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Foodie Dining ",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/like_dining.png"
+                },
+                "_1500w": {
+                  "url": "/assets/like_dining.png"
+                },
+                "_750w": {
+                  "url": "/assets/like_dining.png"
+                },
+                "_500w": {
+                  "url": "/assets/like_dining.png"
+                },
+                "_300w": {
+                  "url": "/assets/like_dining.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "outcomeOptionValue": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Swank Shopping",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/like_shopping.png"
+                },
+                "_1500w": {
+                  "url": "/assets/like_shopping.png"
+                },
+                "_750w": {
+                  "url": "/assets/like_shopping.png"
+                },
+                "_500w": {
+                  "url": "/assets/like_shopping.png"
+                },
+                "_300w": {
+                  "url": "/assets/like_shopping.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "outcomeOptionValue": "1",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "World Village",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/like_worldvillage.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/like_worldvillage.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/like_worldvillage.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/like_worldvillage.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/like_worldvillage.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizQuestion",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "What is your idea of a fun activity?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "outcomeOptionValue": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Golf",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fun_golf.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fun_golf.png"
+                },
+                "_750w": {
+                  "url": "/assets/fun_golf.png"
+                },
+                "_500w": {
+                  "url": "/assets/fun_golf.png"
+                },
+                "_300w": {
+                  "url": "/assets/fun_golf.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "outcomeOptionValue": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Travel",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fun_travel.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fun_travel.png"
+                },
+                "_750w": {
+                  "url": "/assets/fun_travel.png"
+                },
+                "_500w": {
+                  "url": "/assets/fun_travel.png"
+                },
+                "_300w": {
+                  "url": "/assets/fun_travel.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "outcomeOptionValue": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Small Concert",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fun_concert.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fun_concert.png"
+                },
+                "_750w": {
+                  "url": "/assets/fun_concert.png"
+                },
+                "_500w": {
+                  "url": "/assets/fun_concert.png"
+                },
+                "_300w": {
+                  "url": "/assets/fun_concert.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "outcomeOptionValue": "1",
+              "assetType": "image",
+              "caption": "Bowling",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fun_bowling.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fun_bowling.png"
+                },
+                "_750w": {
+                  "url": "/assets/fun_bowling.png"
+                },
+                "_500w": {
+                  "url": "/assets/fun_bowling.png"
+                },
+                "_300w": {
+                  "url": "/assets/fun_bowling.png"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizQuestion",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which fashion suits you?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "outcomeOptionValue": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Hip",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fashion_hip.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fashion_hip.png"
+                },
+                "_750w": {
+                  "url": "/assets/fashion_hip.png"
+                },
+                "_500w": {
+                  "url": "/assets/fashion_hip.png"
+                },
+                "_300w": {
+                  "url": "/assets/fashion_hip.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "outcomeOptionValue": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Chic",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fashion_chic.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fashion_chic.png"
+                },
+                "_750w": {
+                  "url": "/assets/fashion_chic.png"
+                },
+                "_500w": {
+                  "url": "/assets/fashion_chic.png"
+                },
+                "_300w": {
+                  "url": "/assets/fashion_chic.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "outcomeOptionValue": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Business",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fashion_business.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fashion_business.png"
+                },
+                "_750w": {
+                  "url": "/assets/fashion_business.png"
+                },
+                "_500w": {
+                  "url": "/assets/fashion_business.png"
+                },
+                "_300w": {
+                  "url": "/assets/fashion_business.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "outcomeOptionValue": "1",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Casual",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/fashion_casual.png"
+                },
+                "_1500w": {
+                  "url": "/assets/fashion_casual.png"
+                },
+                "_750w": {
+                  "url": "/assets/fashion_casual.png"
+                },
+                "_500w": {
+                  "url": "/assets/fashion_casual.png"
+                },
+                "_300w": {
+                  "url": "/assets/fashion_casual.png"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizQuestion",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which looks like your ideal home?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "outcomeOptionValue": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Bungalow",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/home_bungalow.png"
+                },
+                "_1500w": {
+                  "url": "/assets/home_bungalow.png"
+                },
+                "_750w": {
+                  "url": "/assets/home_bungalow.png"
+                },
+                "_500w": {
+                  "url": "/assets/home_bungalow.png"
+                },
+                "_300w": {
+                  "url": "/assets/home_bungalow.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "outcomeOptionValue": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Historic Estate",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/home_estate.png"
+                },
+                "_1500w": {
+                  "url": "/assets/home_estate.png"
+                },
+                "_750w": {
+                  "url": "/assets/home_estate.png"
+                },
+                "_500w": {
+                  "url": "/assets/home_estate.png"
+                },
+                "_300w": {
+                  "url": "/assets/home_estate.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "outcomeOptionValue": "1",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Ranch-Style Spread",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/home_ranch.png"
+                },
+                "_1500w": {
+                  "url": "/assets/home_ranch.png"
+                },
+                "_750w": {
+                  "url": "/assets/home_ranch.png"
+                },
+                "_500w": {
+                  "url": "/assets/home_ranch.png"
+                },
+                "_300w": {
+                  "url": "/assets/home_ranch.png"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "outcomeOptionValue": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Urban Apartment/Condo",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/home_condo.png"
+                },
+                "_1500w": {
+                  "url": "/assets/home_condo.png"
+                },
+                "_750w": {
+                  "url": "/assets/home_condo.png"
+                },
+                "_500w": {
+                  "url": "/assets/home_condo.png"
+                },
+                "_300w": {
+                  "url": "/assets/home_condo.png"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizResult",
+          "outcomeOptionValue": "1",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": true,
+              "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/result_doraville.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/result_doraville.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/result_doraville.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/result_doraville.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/result_doraville.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizResult",
+          "outcomeOptionValue": "2",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": true,
+              "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/result_buckhead.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/result_buckhead.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/result_buckhead.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/result_buckhead.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/result_buckhead.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizResult",
+          "outcomeOptionValue": "3",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": true,
+              "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/result_inmanpark.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/result_inmanpark.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/result_inmanpark.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/result_inmanpark.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/result_inmanpark.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "outcomeQuizResult",
+          "outcomeOptionValue": "4",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": true,
+              "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/result_midtown.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/result_midtown.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/result_midtown.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/result_midtown.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/result_midtown.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac metus a est eleifend condimentum. In arcu justo, pretium quis ornare non, rutrum et eros."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2312 @@
+{
+  "destinationID": "1",
+  "stories": [
+    {
+      "type": "poll",
+      "title": "Do you think it's important for citizens to vote?",
+      "prompts": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "Nunc eu sapien a augue iaculis consequat?",
+        "Duis cursus erat tortor, quis semper enim rhoncus.",
+        "Nullam cursus diam eu vulputate finibus?"
+      ],
+      "api": {
+        "serviceEndpoint": "https://173.221.27.70/api/",
+        "action": "post",
+        "operation": "polls/8910/",
+        "contentType": "application/json",
+        "data": {
+          "choice": ""
+        }
+      },
+      "formControls": [
+        {
+          "type": "radioGroup",
+          "param": "choice",
+          "options": [
+            {
+              "label": "Always in local and national elections",
+              "value": 1
+            },
+            {
+              "label": "Only in national elections",
+              "value": 2
+            },
+            {
+              "label": "Only if there is a candidate that inspires me",
+              "value": 3
+            },
+            {
+              "label": "Never. It just doesn't make a difference",
+              "value": 4
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "value": 1,
+          "total": 78
+        },
+        {
+          "value": 2,
+          "total": 16
+        },
+        {
+          "value": 3,
+          "total": 9
+        },
+        {
+          "value": 4,
+          "total": 389
+        }
+      ],
+      "media": {
+        "verticalBanner": {
+          "assetType": "image",
+          "acknowledgement": "",
+          "assetMedia": {
+            "full": {
+              "url": "/assets/placeholder/0/placeholder.jpg"
+            },
+            "_1500w": {
+              "url": "/assets/placeholder/4/placeholder_1500w.jpg"
+            },
+            "_750w": {
+              "url": "/assets/placeholder/4/placeholder_750w.jpg"
+            },
+            "_500w": {
+              "url": "/assets/placeholder/4/placeholder_500w.jpg"
+            },
+            "_300w": {
+              "url": "/assets/placeholder/4/placeholder_300w.jpg"
+            }
+          }
+        }
+      },
+      "slides": [
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "pollSlide",
+          "regions": [
+            {
+              "regionID": "1",
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc101553004/0/ahc101553004.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc101553004/2/ahc101553004_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc101553004/2/ahc101553004_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc101553004/2/ahc101553004_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc101553004/2/ahc101553004_300w.jpg"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "Child Agricultural Labor",
+      "description": "",
+      "prompts": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "Nunc eu sapien a augue iaculis consequat?",
+        "Duis cursus erat tortor, quis semper enim rhoncus.",
+        "Nullam cursus diam eu vulputate finibus?"
+      ],
+      "media": {
+        "verticalBanner": {
+          "assetType": "image",
+          "acknowledgement": "",
+          "assetMedia": {
+            "full": {
+              "url": "/assets/placeholder/0/placeholder.jpg"
+            },
+            "_1500w": {
+              "url": "/assets/placeholder/4/placeholder_1500w.jpg"
+            },
+            "_750w": {
+              "url": "/assets/placeholder/4/placeholder_750w.jpg"
+            },
+            "_500w": {
+              "url": "/assets/placeholder/4/placeholder_500w.jpg"
+            },
+            "_300w": {
+              "url": "/assets/placeholder/4/placeholder_300w.jpg"
+            }
+          }
+        }
+      },
+      "slides": [
+        {
+          "type": "native",
+          "layoutTemplateID": "title",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "media",
+              "assetType": "image",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Joe McTyre Photograph Collection",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc106109001-Warm_Springs_Georgia/0/ahc106109001-Warm_Springs_Georgia.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc106109001-Warm_Springs_Georgia/1/ahc106109001-Warm_Springs_Georgia_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc106109001-Warm_Springs_Georgia/1/ahc106109001-Warm_Springs_Georgia_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc106109001-Warm_Springs_Georgia/1/ahc106109001-Warm_Springs_Georgia_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc106109001-Warm_Springs_Georgia/1/ahc106109001-Warm_Springs_Georgia_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 2,
+              "type": "text",
+              "text": "How young is too young? The exploitation of child labor is a dark part of American history. The Fair Labor Standards Act of 1936 ended child labor in harsh factory and mine conditions. But many children continue to labor on American farms. In Georgia, at 16 years of age, children can work on farms. With consent from parents, children as young as 12 can work during non-school hours. Many children assist their parents with chores on the family farm, but on numerous commercial farms children still work in harsh conditions with little regulation and protection."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "layoutTemplateID": "oneAsset",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Georgia Archives, Vanishing Georgia Photographic Collection, tho098",
+              "caption": "Workers Picking Cotton, Thomas County, ca. 1895",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Thomas_County_GA_Archives/1/Thomas_County_GA_Archives_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Thomas_County_GA_Archives/1/Thomas_County_GA_Archives_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Thomas_County_GA_Archives/1/Thomas_County_GA_Archives_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "layoutTemplateID": "threeAssetsTextGrid",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Vincent M. Irick Photographs",
+              "caption": "Boys with Oxen on Judge Spencer's Farm",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc039002013/0/ahc039002013.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc039002013/1/ahc039002013_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc039002013/1/ahc039002013_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc039002013/1/ahc039002013_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc039002013/1/ahc039002013_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 2,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Vincent M. Irick Photographs",
+              "caption": "Boy carrying Collards on Judge Spencer's Farm",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc039001010/0/ahc039001010.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc039001010/1/ahc039001010_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc039001010/1/ahc039001010_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc039001010/1/ahc039001010_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc039001010/1/ahc039001010_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 3,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Vincent M. Irick Photographs",
+              "caption": "Boy carrying a Bucket on Judge Spencer's Farm",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc039002003/0/ahc039002003.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc039002003/1/ahc039002003_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc039002003/1/ahc039002003_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc039002003/1/ahc039002003_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc039002003/1/ahc039002003_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 4,
+              "type": "text",
+              "text": "Children were once a source of labor on many Southern farms. Often children were taken out of school to help on the farms. These boys worked on a farm near Faceville, Georgia in 1899."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "layoutTemplateID": "oneAsset",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Vincent M. Irick Photographs",
+              "caption": "African-Americans working Strawberry Patch, Fort Valley, Peach County, Georgia",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Fort_Valley_GA_Archives/0/Fort_Valley_GA_Archives.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Fort_Valley_GA_Archives/1/Fort_Valley_GA_Archives_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Fort_Valley_GA_Archives/1/Fort_Valley_GA_Archives_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Fort_Valley_GA_Archives/1/Fort_Valley_GA_Archives_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Fort_Valley_GA_Archives/1/Fort_Valley_GA_Archives_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "layoutTemplateID": "fourAssets",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Georgia Archives, Vanishing Georgia Photographic Collection, brw159",
+              "caption": "Members of an African-American family picking cotton in 1940.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Barrow_Co_GA_Archives/0/Barrow_Co_GA_Archives.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Barrow_Co_GA_Archives/1/Barrow_Co_GA_Archives_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Barrow_Co_GA_Archives/1/Barrow_Co_GA_Archives_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Barrow_Co_GA_Archives/1/Barrow_Co_GA_Archives_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Barrow_Co_GA_Archives/1/Barrow_Co_GA_Archives_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 2,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Library of Congress, Prints & Photographs Division, National Child Labor Committee Collection",
+              "caption": "Ten-year old Rader Copeland plows a field in Valdosta, Georgia, in 1915. \"He was plowing during school hours and will lose 10 weeks of schooling,\" the photographer wrote. \"His father said that he needed the boy's help. He plows, plants, chops cotton, picks cotton. The father said: 'He ain't very fast.'\"",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Rader_Copeland_LOC/0/Rader_Copeland_LOC.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Rader_Copeland_LOC/1/Rader_Copeland_LOC_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Rader_Copeland_LOC/1/Rader_Copeland_LOC_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Rader_Copeland_LOC/1/Rader_Copeland_LOC_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Rader_Copeland_LOC/1/Rader_Copeland_LOC_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 3,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Library of Congress, Prints & Photographs Division, National Child Labor Committee Collection",
+              "caption": "Children thrashing corn during school hours on a farm near Dublin, Georgia, in 1915. According to the photographer, \"Many such light occupations fall to the lot of the Georgia child.\"",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Children_Thrashing_LOC/0/Children_Thrashing_LOC.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Children_Thrashing_LOC/1/Children_Thrashing_LOC_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Children_Thrashing_LOC/1/Children_Thrashing_LOC_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Children_Thrashing_LOC/1/Children_Thrashing_LOC_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Children_Thrashing_LOC/1/Children_Thrashing_LOC_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 4,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy WSB Radio Records, Special Collections and Archives, Georgia State University, Atlanta",
+              "caption": "Child picking cotton at Tucker, Georgia",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU/0/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU/1/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU/1/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU/1/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU/1/Child_picking_cotton_at_Tucker_WSB_transmitter_site_GSU_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "layoutTemplateID": "quoteTop",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "text",
+              "assetType": "image",
+              "acknowledgement": "Courtesy U. Roberto Romano Papers, Archives & Special Collection at the Thomas J. Dodd Research Center, University of Connecticut Libraries",
+              "caption": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Romano_176/0/Romano_176.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Romano_176/1/Romano_176_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Romano_176/1/Romano_176_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Romano_176/1/Romano_176_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Romano_176/1/Romano_176_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 2,
+              "type": "text",
+              "text": "\"The first day I was burned. I was in short sleeves and shorts. I thought, Thank God I got through it.\""
+            },
+            {
+              "regionID": 3,
+              "type": "text",
+              "text": "Pedro E. (age 15)"
+            },
+            {
+              "regionID": 4,
+              "type": "text",
+              "text": "Describing working without protective gear, 2009"
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "layoutTemplateID": "twoAssetsTextVertical",
+          "regions": [
+            {
+              "regionID": 1,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy U. Roberto Romano Papers, Archives & Special Collection at the Thomas J. Dodd Research Center, University of Connecticut Libraries",
+              "caption": "Yesenia, 12-years-old, leaves school early to pick onions.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Romano_174/0/Romano_174.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Romano_174/1/Romano_174_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Romano_174/1/Romano_174_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Romano_174/1/Romano_174_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Romano_174/1/Romano_174_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 2,
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy U. Roberto Romano Papers, Archives & Special Collection at the Thomas J. Dodd Research Center, University of Connecticut Libraries",
+              "caption": "An estimated 400,000 to 500,000 children work in the agricultural industry in the United States, many of whom are US citizens. Texas accounts for 60% of the onion seed stock and 25% of the onions consumed in this country.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Romano_175/0/Romano_175.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Romano_175/1/Romano_175_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Romano_175/1/Romano_175_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Romano_175/1/Romano_175_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Romano_175/1/Romano_175_300w.jpg"
+                }
+              }
+            },
+            {
+              "regionID": 3,
+              "type": "text",
+              "text": "Under the Fair Labor Standards Act, workers as young as 14 can work in non-hazardous agriculture jobs outside of school hours. Younger children are frequently hired illegally, however, and many toil in dangerous conditions. Human Rights Watch estimates that as many as 500,000 children work on commercial farms in the U.S."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "Voting Rights",
+      "prompts": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "Nunc eu sapien a augue iaculis consequat?",
+        "Duis cursus erat tortor, quis semper enim rhoncus.",
+        "Nullam cursus diam eu vulputate finibus?"
+      ],
+      "media": {
+        "verticalBanner": {
+          "assetType": "image",
+          "acknowledgement": "",
+          "assetMedia": {
+            "full": {
+              "url": "/assets/placeholder/0/placeholder.jpg"
+            },
+            "_1500w": {
+              "url": "/assets/placeholder/4/placeholder_1500w.jpg"
+            },
+            "_750w": {
+              "url": "/assets/placeholder/4/placeholder_750w.jpg"
+            },
+            "_500w": {
+              "url": "/assets/placeholder/4/placeholder_500w.jpg"
+            },
+            "_300w": {
+              "url": "/assets/placeholder/4/placeholder_300w.jpg"
+            }
+          }
+        }
+      },
+      "slides": [
+        {
+          "type": "native",
+          "title": "Voter Rights Timeline",
+          "date": "",
+          "layoutTemplateID": "timelineTitle",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc101376002/0/ahc101376002.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc101376002/1/ahc101376002_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc101376002/1/ahc101376002_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc101376002/1/ahc101376002_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc101376002/1/ahc101376002_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The right to vote is considered a fundamental entitlement of citizens in the United States. Participation in our democratic process requires the vote. However, most Americans have had to struggle to gain, and maintain, this significant right. Until ratification of the 14th Amendment (1868), most voters were land-owning white males."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "We the People without the Vote",
+          "layoutTemplateID": "timelineSubsection",
+          "regions": []
+        },
+        {
+          "type": "native",
+          "title": "Atlanta's First Municipal Election",
+          "date": "1848",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center",
+              "caption": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc1701157001/0/ahc1701157001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc1701157001/1/ahc1701157001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc1701157001/1/ahc1701157001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc1701157001/0/ahc1701157001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc1701157001/1/ahc1701157001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "On January 29, 1848, 215 male voters elected Moses Formwalt mayor in Atlanta's first municipal election. The polling place was Thomas Kile's grocery, located at today's Five Points in downtown Atlanta."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Elizabeth Cady Stanton and Susan B. Anthony",
+          "date": "1848",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Library of Congress, Prints & Photographs Division",
+              "caption": "Susan B. Anthony and Elizabeth Cady Stanton",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Stanton_Anthony_LOC_159001v/0/Stanton_Anthony_LOC_159001v.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Stanton_Anthony_LOC_159001v/1/Stanton_Anthony_LOC_159001v_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Stanton_Anthony_LOC_159001v/1/Stanton_Anthony_LOC_159001v_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Stanton_Anthony_LOC_159001v/0/Stanton_Anthony_LOC_159001v_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Stanton_Anthony_LOC_159001v/1/Stanton_Anthony_LOC_159001v_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The same year Atlanta held its first municipal election, the Seneca Falls Convention launched the American woman's suffrage movement. The convention's Declaration of Sentiments declared, \"all men and women are created equal.\""
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Proclamation of Emancipation",
+          "date": "1865",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Library of Congress, Prints & Photographs Division",
+              "caption": "Hand colored photograph of a woman (Columbia) holding a document and standing between two kneeling slaves. The slave to her left, a man, holds a U.S. flag; the slave to her right, a woman, is draped in the U.S. flag.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/10976u/0/10976u.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/10976u/1/10976u_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/10976u/1/10976u_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/10976u/0/10976u_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/10976u/1/10976u_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "As women pushed for the right to vote, African Americans did the same. For four million enslaved blacks, the American Civil War was fought for freedom and citizenship. Union victory emboldened African American efforts to gain voting rights."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Still Denied",
+          "layoutTemplateID": "timelineSubsection",
+          "regions": []
+        },
+        {
+          "type": "native",
+          "title": "The 15th Amendment",
+          "date": "1870",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Library of Congress, Prints & Photographs Division",
+              "caption": "One of several large commemorative prints marking the enactment, on March 30, 1870, of the Fifteenth Amendment and showing the grand May 19 celebratory parade in Baltimore. Here the central image shows the parade crossing a green in sight of Baltimore's Washington Monument.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/34808u/0/34808u.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/34808u/1/34808u_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/34808u/1/34808u_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/34808u/0/34808u_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/34808u/1/34808u_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "Congress approved the 15th Amendment during Reconstruction. As ratified in 1870, it stated that the \"right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of race, color, or previous condition of servitude.\" Decades of racist policies challenged the clear intent of the amendment."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "\"Now for Battle\"",
+          "date": "1895",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "caption": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/placeholder/3/placeholder_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/placeholder/3/placeholder_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/3/placeholder_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/placeholder/3/placeholder_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "In the 1890s, Georgia's woman's suffrage movement sprang to life when Helen Augusta Howard founded the Georgia Woman Suffrage Association. In 1895, the newly formed Equal Suffrage League hosted the National American Woman Suffrage Association annual conference in Atlanta. This was the first time the conference met outside Washington, D.C. Many famous suffragists attended including Susan B. Anthony and Anna Howard Shaw."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "\"Chinese Father Proud of Three Happy Children\"",
+          "date": "1890s",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Atlanta Journal-Constitution",
+              "caption": "Chinese Father Proud of Three Happy Children",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/AJC_Lum_Ling/0/AJC_Lum_Ling.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/AJC_Lum_Ling/1/AJC_Lum_Ling_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/AJC_Lum_Ling/1/AJC_Lum_Ling_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/AJC_Lum_Ling/0/AJC_Lum_Ling_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/AJC_Lum_Ling/1/AJC_Lum_Ling_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "Asian Americans were denied citizenship as well as the right to vote. In 1898 the U.S. Supreme Court ruled that children born on American soil were citizens. Nevertheless, Chinese living in the U.S., such as Lum Ling of Atlanta, faced onging discrimination."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Dr. W.E.B. Du Bois",
+          "date": "1909",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "caption": "Dr. W.E.B. Du Bois",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/WEB_DuBois/0/WEB_DuBois_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/WEB_DuBois/0/WEB_DuBois_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/WEB_DuBois/0/WEB_DuBois_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "W.E.B. Du Bois was a prominent figure in Atlanta and a faculty member at Atlanta University. He played a critical role in founding both the Niagara Movement and, in 1909, the National Association for the Advancement of Colored People. The NAACP remains an influential advocate for African American civil and voting rights. \"In detail our demands are clear and unequivocal,\" Du Bois wrote. \"First, we would vote; with the right to vote goes everything: Freedom, manhood, the honor of your wives, the chastity of your daughters, the right to work, and the chance to rise, and let no man listen to those who deny this. ... We want full manhood suffrage, and we want it now, henceforth and forever.\""
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Lugenia Burns Hope",
+          "date": "1908",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "caption": "Lugenia Burns Hope, wife of John Hope, the president of Atlanta University, was a leading association member, social activist, and community organizer.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/placeholder/3/placeholder_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/placeholder/3/placeholder_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/3/placeholder_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/placeholder/3/placeholder_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The woman's suffrage movement in the South largely excluded African American women. To fill the void, black women formed the National Association of Colored Women (1896) to advocate for their rights as women and blacks simultaneously. Lugenia Burns Hope, wife of John Hope, the president of Atlanta University, was a leading association member, social activist, and community organizer."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "The 19th Amendment",
+          "date": "August 18, 1920",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Library of Congress, Prints & Photographs Division",
+              "caption": "A figure representing \"Votes for Women\" marches across America, symbolizing the awakening desire for women's suffrage.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Awakening_LOC_3b49106u/0/Awakening_LOC_3b49106u.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Awakening_LOC_3b49106u/1/Awakening_LOC_3b49106u_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Awakening_LOC_3b49106u/1/Awakening_LOC_3b49106u_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Awakening_LOC_3b49106u/0/Awakening_LOC_3b49106u_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Awakening_LOC_3b49106u/1/Awakening_LOC_3b49106u_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The 19th amendment guaranteed all American women the right to vote. Although Georgia voters rejected the amendment in 1919, it was ratified by the required number of states and then by Congress in 1920. Georgia didn't ratify the amendment until 1970."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "March for Voting Rights",
+          "layoutTemplateID": "timelineSubsection",
+          "regions": []
+        },
+        {
+          "type": "native",
+          "title": "Rebecca Latimer Felton",
+          "date": "1922",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Kenan Research Center",
+              "caption": "Rebecca Latimer Felton was the first female U.S. senator. A staunch advocate for women's rights, she was an equally vocal and determined white supremacist.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc170017001/0/ahc170017001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc170017001/1/ahc170017001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc170017001/1/ahc170017001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc170017001/0/ahc170017001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc170017001/1/ahc170017001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "When Governor Thomas Hardwick appointed Rebecca Latimer Felton of Atlanta to fill the vacancy left by the death of Senator Thomas E. Watson, Felton became the first female U.S. senator. Sworn in on November 21, 1922, her term of office ended on November 22. A staunch advocate for women's rights, she was an equally vocal and determined white supremacist.  She said, \"When the women of the country come in and sit with you, though there may be but a very few in the next few years, I pledge you that you will get ability, you will get integrity of purpose, you will get exalted patriotism, and you will get unstinted usefulness.\"  Rebecca Latimer Felton's speech before the Senate gave a prediction on the women that would follow her. To date, no woman has been elected from Georgia to the U.S. Senate."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "African American Voters",
+          "date": "1944",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Courtesy Georgia State University, Atlanta ",
+              "caption": "Voters cast ballots in the race for Fifth District U.S. Congress in 1946.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/African_American_voters_GSU/0/African_American_voters_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/African_American_voters_GSU/1/African_American_voters_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/African_American_voters_GSU/1/African_American_voters_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/African_American_voters_GSU/0/African_American_voters_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/African_American_voters_GSU/1/African_American_voters_GSU_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "All-white primaries, literary tests, and poll taxes disenfranchised African Americans in Georgia and across the South. In 1944, pivotal court decision ruled the pro-segregationist Democratic Party's whites-only primary system unconstitutional. That opened the door for African American voters throughout the Democratic South."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Atlanta Negro Voters League",
+          "date": "1946",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "Gift of June Dobbs Butts",
+              "caption": "John Wesley Dobbs, known unofficially as the \"Mayor of Auburn Avenue,\" believed African American suffrage held the key to political and economic progress.He co-founded the Atlanta Negro Voters League in 1946.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/5213_John_Wesley_Dobbs_Loan/0/5213_John_Wesley_Dobbs_Loan.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/5213_John_Wesley_Dobbs_Loan/1/5213_John_Wesley_Dobbs_Loan_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/5213_John_Wesley_Dobbs_Loan/1/5213_John_Wesley_Dobbs_Loan_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/5213_John_Wesley_Dobbs_Loan/0/5213_John_Wesley_Dobbs_Loan_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/5213_John_Wesley_Dobbs_Loan/1/5213_John_Wesley_Dobbs_Loan_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "John Wesley Dobbs, known unofficially as the \"Mayor of Auburn Avenue,\" believed African American suffrage held the key to political and economic progress. In 1946, Dobbs and attorney A.T. Walden cofounded the Atlanta Negro Voters League. The nonpartisan league recommended candidates it felt would serve black Atlanta communities."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Signing of the Voting Rights Act",
+          "date": "1965",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "caption": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Voting_Rights_Act_1965/1/Voting_Rights_Act_1965_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Voting_Rights_Act_1965/1/Voting_Rights_Act_1965_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Voting_Rights_Act_1965/1/Voting_Rights_Act_1965_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The Voting Rights Act of 1965 guaranteed African Americans their rights under the 15th Amendment almost a century after ratification in 1870. The act forbade discrimination on the basis of race and included provisions for enforcement."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Still Needed Today",
+          "layoutTemplateID": "timelineSubsection",
+          "regions": []
+        },
+        {
+          "type": "native",
+          "title": "The 26th Amendment",
+          "date": "1971",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": true,
+              "acknowledgement": "",
+              "caption": "Anti-draft demonstration at the Fulton County Selective Service Board offices",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Anti_draft_rally_GSU/0/Anti_draft_rally_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Anti_draft_rally_GSU/1/Anti_draft_rally_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Anti_draft_rally_GSU/1/Anti_draft_rally_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Anti_draft_rally_GSU/0/Anti_draft_rally_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Anti_draft_rally_GSU/1/Anti_draft_rally_GSU_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The Voting Rights Act did not settle all issues related to voting. As the war in Vietnam dragged on, student activists argued that if 18-year-old males could be drafted for military service, they should be able to vote. The 26th Amendment (1971) lowered the voting age to 18."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Voter Education Project",
+          "date": "1973",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center",
+              "caption": "A staff person of the Southern Regional Council's Voter Education Project encouraging voter participation in downtown Atlanta in 1973.",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc101553004/0/ahc101553004.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc101553004/3/ahc101553004_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc101553004/3/ahc101553004_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc101553004/0/ahc101553004_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc101553004/3/ahc101553004_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "The Voter Education Project, founded in 1962 in Atlanta, sponsored education programs on voter rights and conducted voter registration drives throughout the South. Although it closed in 1992, similar organizations continue to encourage voter participation."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Language Assistance",
+          "date": "1975",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "caption": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/placeholder/3/placeholder_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/placeholder/3/placeholder_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/3/placeholder_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/placeholder/3/placeholder_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "In 1975, Congress amended the Voting Rights Act to provide language assistance at election polls, a policy that remains controversial."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "Challenges to the Voting Rights Act",
+          "date": "2013",
+          "layoutTemplateID": "timelineEvent",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": 1,
+              "assetType": "image",
+              "vignetteOpacity": 20,
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "caption": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/placeholder/3/placeholder_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/placeholder/3/placeholder_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/3/placeholder_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/placeholder/3/placeholder_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": 2,
+              "text": "In Shelby County v. Holder (2013), the U.S. Supreme Court declared Section 4(b) of the Voting Rights Act unconstitutional. The decision questioned the continued validity of federal government oversight of state and local elections. Many believed the oversight, intended to prevent restrictive practices, was no longer needed. Others feared that the court decision opened the door to new efforts to deny people of color their voting rights.  Do you think that American citizens still require protections that ensure their right to vote?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gradedQuiz",
+      "title": "Atlanta Mayoral Quiz",
+      "prompts": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "Nunc eu sapien a augue iaculis consequat?",
+        "Duis cursus erat tortor, quis semper enim rhoncus.",
+        "Nullam cursus diam eu vulputate finibus?"
+      ],
+      "correctStr": "CORRECT",
+      "incorrectStr": "INCORRECT",
+      "media": {
+        "verticalBanner": {
+          "assetType": "image",
+          "acknowledgement": "",
+          "assetMedia": {
+            "full": {
+              "url": "/assets/placeholder/0/placeholder.jpg"
+            },
+            "_1500w": {
+              "url": "/assets/placeholder/4/placeholder_1500w.jpg"
+            },
+            "_750w": {
+              "url": "/assets/placeholder/4/placeholder_750w.jpg"
+            },
+            "_500w": {
+              "url": "/assets/placeholder/4/placeholder_500w.jpg"
+            },
+            "_300w": {
+              "url": "/assets/placeholder/4/placeholder_300w.jpg"
+            }
+          }
+        }
+      },
+      "slides": [
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "title",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/placeholder/0/placeholder.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/placeholder/1/placeholder_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/placeholder/1/placeholder_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/placeholder/1/placeholder_400w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/placeholder/1/placeholder_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "How well do you know Atlanta's mayors?"
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizQuestion",
+          "correctAnswerID": "3",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which mayor went one round with boxer Muhammad Ali?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Ivan Allen Jr.",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc071373003/0/ahc071373003.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "William B. Hartsfield",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc099064001/0/ahc099064001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Maynard Jackson",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc158001200/0/ahc158001200.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "showCaption": true,
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Roy LeCraw",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc082025016/0/ahc082025016.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizAnswer",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Floyd Jillson Photographs",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc071410001/0/ahc071410001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc071410001/1/ahc071410001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc071410001/1/ahc071410001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc071410001/1/ahc071410001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc071410001/1/ahc071410001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Maynard Jackson was the first African American mayor of Atlanta. He served two terms (1974-1982) and a third from 1990 to 1994. He also worked, along with Andrew Young, to bring the Olympic Games to Atlanta."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizQuestion",
+          "correctAnswerID": "2",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which mayor founded the Atlanta-based Coca-Cola Company and led the city during World War I?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "James Key",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc043013007/0/ahc043013007.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Asa Candler",
+              "acknowledgement": "Emory University, Manuscript, Archives, and Rare Book Library",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Emory_Candler/0/Emory_Candler.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Emory_Candler/1/Emory_Candler_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Emory_Candler/1/Emory_Candler_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Emory_Candler/1/Emory_Candler_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Emory_Candler/1/Emory_Candler_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "James Woodard",
+              "acknowledgement": "Emory University, Manuscript, Archives, and Rare Book Library",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Emory_Woodward/0/Emory_Woodward.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Emory_Woodward/1/Emory_Woodward_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Emory_Woodward/1/Emory_Woodward_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Emory_Woodward/1/Emory_Woodward_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Emory_Woodward/1/Emory_Woodward_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Ivan Allen Jr.",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc071373003/0/ahc071373003.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizAnswer",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Atlanta History Photograph Collection",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc1701693001/0/ahc1701693001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc1701693001/1/ahc1701693001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc1701693001/1/ahc1701693001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc1701693001/1/ahc1701693001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc1701693001/1/ahc1701693001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Ever the entrepreneur, Asa Candler began his career as a successful manufacturer of patent medicines. In 1888, he purchased the rights to a tonic medicine called Coca-Cola. Candler rebranded the tonic as a soft drink and founded The Coca-Cola Company. Voters elected Candler mayor in 1916 on his success as a businessman."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizQuestion",
+          "correctAnswerID": "1",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which mayor served as co-chair for the Atlanta Committee for the Olympic Games and pushed the city towards international status?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Andrew Young",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc071450003a/0/ahc071450003a.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc071450003a/1/ahc071450003a_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc071450003a/1/ahc071450003a_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc071450003a/1/ahc071450003a_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc071450003a/1/ahc071450003a_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "William B. Hartsfield",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc099064001/0/ahc099064001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Maynard Jackson",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc158001200/0/ahc158001200.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc158001200/1/ahc158001200_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Bill Campbell",
+              "acknowledgement": "Georgia State University, Atlanta, Special Collections and Archives",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/0/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizAnswer",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Courtesy Atlanta Journal-Constitution Photographic Archive, Special Collections and Archives, Georgia State University, Atlanta",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Andy_Young_Cabbagetown_demo_GSU/0/Andy_Young_Cabbagetown_demo_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Andy_Young_Cabbagetown_demo_GSU/1/Andy_Young_Cabbagetown_demo_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Andy_Young_Cabbagetown_demo_GSU/1/Andy_Young_Cabbagetown_demo_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Andy_Young_Cabbagetown_demo_GSU/1/Andy_Young_Cabbagetown_demo_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Andy_Young_Cabbagetown_demo_GSU/1/Andy_Young_Cabbagetown_demo_GSU_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Diplomat, politician, pastor, and civil rights activist, Andrew Young served Georgia and the United States in many roles. He was the executive director of the Southern Christian Leadership Conference, a U.S. congressman (1973 to 1976), and ambassador to the United Nations during the administration of President Jimmy Carter. As mayor of Atlanta in the 1980s, he helped secure the bid for the 1996 Olympic Games."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizQuestion",
+          "correctAnswerID": "1",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which Atlanta mayor served in city government during both the Maynard Jackson and Andrew Young administrations?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Shirley Franklin",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Southline Press Inc. Photographs",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc158001138/0/ahc158001138.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Bill Campbell",
+              "acknowledgement": "Georgia State University, Atlanta, Special Collections and Archives",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/0/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU/1/Atlanta_mayor_Bill_Campbell_and_Karen_Nussbaum_middle_GSU_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Sam Massell",
+              "acknowledgement": "Georgia State University, Atlanta, Special Collections and Archives",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/0/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Roy LeCraw",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc082025016/0/ahc082025016.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc082025016/1/ahc082025016_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizAnswer",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Southline Press Inc. Photographs",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc158001138/0/ahc158001138.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc158001138/1/ahc158001138_500w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Shirley Franklin, Atlanta's 58th mayor, was the first female African American mayor of a major Southern city. Voters elected her to two terms (2002-2010). Previously, she served on the Commission of Cultural Affairs in Mayor Maynard Jackson's administration and was appointed chief administrative officer and city manager while Andrew Young was mayor."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizQuestion",
+          "correctAnswerID": "4",
+          "regions": [
+            {
+              "type": "text",
+              "regionID": "1",
+              "text": "Which mayor presented the Beatles with the key to the city?"
+            },
+            {
+              "type": "media",
+              "regionID": "2",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Ivan Allen Jr.",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc071373003/0/ahc071373003.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc071373003/1/ahc071373003_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "3",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "William B. Hartsfield",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc099064001/0/ahc099064001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc099064001/1/ahc099064001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "4",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "Sam Massell",
+              "acknowledgement": "Georgia State University, Atlanta, Special Collections and Archives",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/0/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU/1/Mayor_Sam_Massell_and_Dorothy_Bolden_GSU_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "20",
+              "allowEnlarge": false,
+              "caption": "James L. Key",
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc043013007/0/ahc043013007.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc043013007/1/ahc043013007_300w.jpg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizAnswer",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "5",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Kenan Research Center at the Atlanta History Center, Allen Family Photographs",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/ahc104109001/0/ahc104109001.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/ahc104109001/1/ahc104109001_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/ahc104109001/1/ahc104109001_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/ahc104109001/1/ahc104109001_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/ahc104109001/1/ahc104109001_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Ivan Allen Jr. was mayor from 1962 to 1970. He steered Atlanta through pivotal economic and physical changes to the urban landscape and maintained civic peace during the Civil Rights Movement."
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizResults",
+          "minimumTotalValue": "5",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Nick Busse",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/2841344856/0/2841344856.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/2841344856/1/2841344856_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/2841344856/1/2841344856_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/2841344856/1/2841344856_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/2841344856/1/2841344856_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "You Know Your Atlanta History!"
+            },
+            {
+              "type": "text",
+              "regionID": "3",
+              "text": "You got [correct] out of [total] correct."
+            },
+            {
+              "type": "text",
+              "regionID": "4",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizResults",
+          "minimumTotalValue": "3",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/2841344856/0/2841344856.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/2841344856/1/2841344856_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/2841344856/1/2841344856_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/2841344856/1/2841344856_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/2841344856/1/2841344856_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Good Try!"
+            },
+            {
+              "type": "text",
+              "regionID": "3",
+              "text": "You got [correct] out of [total] correct."
+            },
+            {
+              "type": "text",
+              "regionID": "4",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "gradedQuizResults",
+          "minimumTotalValue": "0",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/2841344856/0/2841344856.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/2841344856/1/2841344856_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/2841344856/1/2841344856_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/2841344856/1/2841344856_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/2841344856/1/2841344856_300w.jpg"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "regionID": "2",
+              "text": "Better Luck Next Time!"
+            },
+            {
+              "type": "text",
+              "regionID": "3",
+              "text": "You got [correct] out of [total] correct."
+            },
+            {
+              "type": "text",
+              "regionID": "4",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

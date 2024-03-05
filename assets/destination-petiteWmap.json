@@ -1,0 +1,355 @@
+{
+  "destinationID": "5",
+  "stories": [
+    {
+      "type": "mapWithHotSpots",
+      "title": "Community Gathering Spaces Through Time",
+      "slides": [
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "mapWithHotspots",
+          "regions": [
+            {
+              "type": "media",
+              "regionID": "1",
+              "assetType": "map",
+              "mapboxStyleURL": "mapbox://styles/terraincognita/cih3xl6c5001790m3fku5blh9",
+              "mapboxAccessToken": "pk.eyJ1IjoidGVycmFpbmNvZ25pdGEiLCJhIjoiS3FCYi1kUSJ9.tF9nykTfQrO-e9BsYbJrRQ",
+              "mapboxShareURL": "https://api.mapbox.com/styles/v1/terraincognita/cih3xl6c5001790m3fku5blh9.html?title=true&access_token=pk.eyJ1IjoidGVycmFpbmNvZ25pdGEiLCJhIjoiS3FCYi1kUSJ9.tF9nykTfQrO-e9BsYbJrRQ#13/33.75295349506905/-84.38304020104722/0",
+              "hotspots": [
+                {
+                  "latitude": "33.67878",
+                  "longitude": "-84.44067",
+                  "title": "Oz Pizza",
+                  "layoutTemplateID": "imageAboveText",
+                  "regions": [
+                    {
+                      "type": "media",
+                      "regionID": "1",
+                      "assetType": "image",
+                      "assetMedia": {
+                        "full": {
+                          "url": "/assets/eastPoint_OzPizza/0/eastPoint_OzPizza.jpg"
+                        },
+                        "_1500w": {
+                          "url": "/assets/eastPoint_OzPizza/0/eastPoint_OzPizza_1500w.jpg"
+                        },
+                        "_750w": {
+                          "url": "/assets/eastPoint_OzPizza/0/eastPoint_OzPizza_750w.jpg"
+                        },
+                        "_500w": {
+                          "url": "/assets/eastPoint_OzPizza/0/eastPoint_OzPizza_500w.jpg"
+                        },
+                        "_300w": {
+                          "url": "/assets/eastPoint_OzPizza/0/eastPoint_OzPizza_300w.jpg"
+                        }
+                      },
+                      "vignetteOpacity": "20",
+                      "acknowledgement": "Kenan Research Center (historic) and Courtesy Ben McIver (modern)"
+                    },
+                    {
+                      "type": "text",
+                      "regionID": "2",
+                      "text": "Pizza joints are an all-American community gathering space. Oz Pizza, on Whiteway Avenue in East Point's old business district, serves that purpose well."
+                    }
+                  ]
+                },
+                {
+                  "latitude": "33.75447",
+                  "longitude": "-84.37237",
+                  "title": "Sister Louisa's Church Bar",
+                  "layoutTemplateID": "imageAboveText",
+                  "regions": [
+                    {
+                      "type": "media",
+                      "regionID": "1",
+                      "assetType": "image",
+                      "assetMedia": {
+                        "full": {
+                          "url": "/assets/sisterLouisa/0/sisterLouisa.jpg"
+                        },
+                        "_1500w": {
+                          "url": "/assets/sisterLouisa/0/sisterLouisa_1500w.jpg"
+                        },
+                        "_750w": {
+                          "url": "/assets/sisterLouisa/0/sisterLouisa_750w.jpg"
+                        },
+                        "_500w": {
+                          "url": "/assets/sisterLouisa/0/sisterLouisa_500w.jpg"
+                        },
+                        "_300w": {
+                          "url": "/assets/sisterLouisa/0/sisterLouisa_300w.jpg"
+                        }
+                      },
+                      "vignetteOpacity": "20",
+                      "acknowledgement": "Kenan Research Center (historic) and Courtesy Ben McIver (modern)"
+                    },
+                    {
+                      "type": "text",
+                      "regionID": "2",
+                      "text": "Patrons of Sister Louisa's Church of the Living Room & Ping Pong Emporium may be surprised to know that one of the earliest Coca-Cola bottling plants stood a few doors down the street."
+                    }
+                  ]
+                },
+                {
+                  "latitude": "33.73504",
+                  "longitude": "-84.37096",
+                  "title": "Grant Park",
+                  "layoutTemplateID": "imageAboveText",
+                  "regions": [
+                    {
+                      "type": "media",
+                      "regionID": "1",
+                      "assetType": "image",
+                      "assetMedia": {
+                        "full": {
+                          "url": "/assets/grantPark/0/grantPark.jpg"
+                        },
+                        "_1500w": {
+                          "url": "/assets/grantPark/0/grantPark_1500w.jpg"
+                        },
+                        "_750w": {
+                          "url": "/assets/grantPark/0/grantPark_750w.jpg"
+                        },
+                        "_500w": {
+                          "url": "/assets/grantPark/0/grantPark_500w.jpg"
+                        },
+                        "_300w": {
+                          "url": "/assets/grantPark/0/grantPark_300w.jpg"
+                        }
+                      },
+                      "vignetteOpacity": "20",
+                      "acknowledgement": "Kenan Research Center (historic) and Courtesy Ben McIver (modern)"
+                    },
+                    {
+                      "type": "text",
+                      "regionID": "2",
+                      "text": "Atlanta has many neighborhood parks where people gather for community activities. Grant Park is Atlanta's oldest park, established in 1882 on land donated by Lemuel P. Grant. Still popular today, the park is home to Zoo Atlanta."
+                    }
+                  ]
+                },
+                {
+                  "latitude": "33.77226",
+                  "longitude": "-84.36618",
+                  "title": "Ponce de Leon Springs",
+                  "layoutTemplateID": "imageAboveText",
+                  "regions": [
+                    {
+                      "type": "media",
+                      "regionID": "1",
+                      "assetType": "image",
+                      "assetMedia": {
+                        "full": {
+                          "url": "/assets/ponceDeLeonSprings/0/ponceDeLeonSprings.jpg"
+                        },
+                        "_1500w": {
+                          "url": "/assets/ponceDeLeonSprings/0/ponceDeLeonSprings_1500w.jpg"
+                        },
+                        "_750w": {
+                          "url": "/assets/ponceDeLeonSprings/0/ponceDeLeonSprings_750w.jpg"
+                        },
+                        "_500w": {
+                          "url": "/assets/ponceDeLeonSprings/0/ponceDeLeonSprings_500w.jpg"
+                        },
+                        "_300w": {
+                          "url": "/assets/ponceDeLeonSprings/0/ponceDeLeonSprings_300w.jpg"
+                        }
+                      },
+                      "vignetteOpacity": "20",
+                      "acknowledgement": "Kenan Research Center (historic) and Courtesy Ben McIver (modern)"
+                    },
+                    {
+                      "type": "text",
+                      "regionID": "2",
+                      "text": "During hot 19th-century summers, Atlantans flocked to Ponce de Leon Springs. In 1926, the Sears, Roebuck & Co. built a distribution center on the site. Today, the Historic Old Fourth Ward Park provides public green space just blocks south of the once-rural site."
+                    }
+                  ]
+                },
+                {
+                  "latitude": "33.77199",
+                  "longitude": "-84.38461",
+                  "title": "The Ponce Condominium",
+                  "layoutTemplateID": "imageAboveText",
+                  "regions": [
+                    {
+                      "type": "media",
+                      "regionID": "1",
+                      "assetType": "image",
+                      "assetMedia": {
+                        "full": {
+                          "url": "/assets/ponceCondominiums/0/ponceCondominiums.jpg"
+                        },
+                        "_1500w": {
+                          "url": "/assets/ponceCondominiums/0/ponceCondominiums_1500w.jpg"
+                        },
+                        "_750w": {
+                          "url": "/assets/ponceCondominiums/0/ponceCondominiums_750w.jpg"
+                        },
+                        "_500w": {
+                          "url": "/assets/ponceCondominiums/0/ponceCondominiums_500w.jpg"
+                        },
+                        "_300w": {
+                          "url": "/assets/ponceCondominiums/0/ponceCondominiums_300w.jpg"
+                        }
+                      },
+                      "vignetteOpacity": "20",
+                      "acknowledgement": "Kenan Research Center (historic) and Courtesy Ben McIver (modern)"
+                    },
+                    {
+                      "type": "text",
+                      "regionID": "2",
+                      "text": "People often build community with neighbors, especially in dense buildings and neighborhoods. In 1913, George A. Fuller Company built the Ponce de Leon Apartments, Atlanta's first, large, luxury high-rise. The building still stands on Peachtree Street."
+                    }
+                  ]
+                },
+                {
+                  "latitude": "33.777108",
+                  "longitude": "-84.352548",
+                  "title": "Blind Willie's Blues Club",
+                  "layoutTemplateID": "imageAboveText",
+                  "regions": [
+                    {
+                      "type": "media",
+                      "regionID": "1",
+                      "assetType": "image",
+                      "assetMedia": {
+                        "full": {
+                          "url": "/assets/BlindWilliesBluesClub/0/BlindWilliesBluesClub.jpg"
+                        },
+                        "_1500w": {
+                          "url": "/assets/BlindWilliesBluesClub/0/BlindWilliesBluesClub_1500w.jpg"
+                        },
+                        "_750w": {
+                          "url": "/assets/BlindWilliesBluesClub/0/BlindWilliesBluesClub_750w.jpg"
+                        },
+                        "_500w": {
+                          "url": "/assets/BlindWilliesBluesClub/0/BlindWilliesBluesClub_500w.jpg"
+                        },
+                        "_300w": {
+                          "url": "/assets/BlindWilliesBluesClub/0/BlindWilliesBluesClub_300w.jpg"
+                        }
+                      },
+                      "vignetteOpacity": "20",
+                      "acknowledgement": "Kenan Research Center (historic) and Courtesy Ben McIver (modern)"
+                    },
+                    {
+                      "type": "text",
+                      "regionID": "2",
+                      "text": "Nothing screams southern music more than the Blues. Since 1986, fans have gathered at Virigina-Highland's Blind Willie's Blues Club, named for legendary Georgia musician Blind Willie McTell."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "poll",
+      "title": "Where do you connect with your community?",
+      "api": {
+        "serviceEndpoint": "https://173.221.27.70/api/",
+        "action": "post",
+        "operation": "polls/8720/",
+        "contentType": "application/json",
+        "data": {
+          "choice": ""
+        }
+      },
+      "formControls": [
+        {
+          "type": "radioGroup",
+          "param": "choice",
+          "options": [
+            {
+              "label": "Religious Space",
+              "value": 1
+            },
+            {
+              "label": "Local Businesses",
+              "value": 2
+            },
+            {
+              "label": "Festival and Fairs",
+              "value": 3
+            },
+            {
+              "label": "Work",
+              "value": 4
+            },
+            {
+              "label": "Sports",
+              "value": 5
+            },
+            {
+              "label": "Political Activism",
+              "value": 6
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "value": 1,
+          "total": 78
+        },
+        {
+          "value": 2,
+          "total": 16
+        },
+        {
+          "value": 3,
+          "total": 9
+        },
+        {
+          "value": 4,
+          "total": 389
+        },
+        {
+          "value": 5,
+          "total": 86
+        },
+        {
+          "value": 6,
+          "total": 108
+        }
+      ],
+      "slides": [
+        {
+          "type": "native",
+          "title": "",
+          "layoutTemplateID": "pollSlide",
+          "regions": [
+            {
+              "regionID": "1",
+              "type": "media",
+              "assetType": "image",
+              "vignetteOpacity": "0",
+              "allowEnlarge": false,
+              "acknowledgement": "Courtesy William Richardson",
+              "assetMedia": {
+                "full": {
+                  "url": "/assets/10056784863/0/10056784863.jpg"
+                },
+                "_1500w": {
+                  "url": "/assets/10056784863/1/10056784863_1500w.jpg"
+                },
+                "_750w": {
+                  "url": "/assets/10056784863/1/10056784863_750w.jpg"
+                },
+                "_500w": {
+                  "url": "/assets/10056784863/1/10056784863_500w.jpg"
+                },
+                "_300w": {
+                  "url": "/assets/10056784863/1/10056784863_300w.jpg"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
