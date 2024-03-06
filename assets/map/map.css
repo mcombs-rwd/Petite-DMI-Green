@@ -1,16 +1,19 @@
 ::webkit-scrollbar {
   display: none;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
 #map {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
+
 .info-container {
   position: absolute;
   left: 4%;
@@ -19,6 +22,7 @@ body {
   width: 47%;
   z-index: 10;
 }
+
 .info {
   position: relative;
   height: auto;
@@ -27,6 +31,7 @@ body {
   border-radius: 10px;
   float: left;
 }
+
 .tab {
   position: absolute;
   height: 40px;
@@ -41,6 +46,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .info-image {
   border-radius: 10px 10px 0px 0px;
   position: relative;
@@ -60,6 +66,7 @@ body {
   float: left;
   overflow: hidden;
 }
+
 .info-close {
   position: relative;
   width: 100%;
@@ -68,6 +75,7 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 .info-title {
   position: relative;
   width: 100%;
@@ -76,6 +84,7 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .info-description {
   position: relative;
   width: 100%;
@@ -83,6 +92,7 @@ body {
   font-size: 12px;
   overflow-y: hidden;
 }
+
 .hide {
   display: none !important;
 }
@@ -97,6 +107,4 @@ body {
   width: 20px;
   height: 20px;
   background-size: cover;
-}
-#info-one {
 }
