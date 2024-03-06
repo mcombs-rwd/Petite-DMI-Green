@@ -17,28 +17,38 @@ document.addEventListener('DOMContentLoaded', function () {
   var n = 0;
   markers.forEach((marker) => {
     marker.id = "click-" + titles[n];
-    functionCall = "openInfo('" + titles[n] + "')";
+    functionCall = "toggleInfo('" + titles[n] + "')";
     marker.setAttribute("onClick", functionCall);
     console.log("Marker call: %s", functionCall);
     n++;
   })
 });
 
-function openInfo(event) {
-  // TODO: Clicking marker should toggle element visibility
-  console.log("opening %s", event);
-  document.getElementById(event).className = "info-container";
+function toggleInfo(event) {
+  console.log("Toggling %s", event);
+  if (document.getElementById(event).className.includes("hide")) {
+    document.getElementById(event).className = "info-container";
+  } else {
+    document.getElementById(event).className = "info-container hide";
+  };
 }
 
-function openAll() {
-  popups.forEach((container) => {
-    container.className = 'info-container';
-  });
-}
+// // Unused
+// function openInfo(event) {
+//   console.log("opening %s", event);
+//   document.getElementById(event).className = "info-container";
+// }
 
-function addOpenFunction() {
-  $('#marker-one').on('click', { id: 'info-one' }, openInfo);
-}
+// function addOpenFunction() {
+//   $('#marker-one').on('click', { id: 'info-one' }, openInfo);
+// }
+
+// function openAll() {
+//   popups.forEach((container) => {
+//     container.className = 'info-container';
+//   });
+// }
+
 
 // ALL FUNCTIONS BELOW ARE REQUIRED BY ORIGINAL AIR APP, MANY ARE NOT IMPLEMENTED
 function addMarker(mark, lat, lng) {}
