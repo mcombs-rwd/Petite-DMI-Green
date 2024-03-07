@@ -1,0 +1,158 @@
+package com.rw.ahc.dmi.view.map
+{
+   import flash.display.Shape;
+   import flash.display.Sprite;
+   import flash.display.Stage;
+   import flash.events.Event;
+   import flash.events.LocationChangeEvent;
+   import flash.events.MouseEvent;
+   import flash.filesystem.File;
+   import flash.geom.Rectangle;
+   import flash.media.StageWebView;
+   import flash.utils.setTimeout;
+   
+   public class MapSlide extends Sprite
+   {
+      
+      public static const PERSON_INTERACTING:String = "Person Interacting";
+       
+      
+      private var webView:StageWebView;
+      
+      private var _screen:Object;
+      
+      private var background:Shape;
+      
+      private var _slideType:String = "map";
+      
+      public function MapSlide(param1:Object, param2:Stage)
+      {
+         var tempFunc:Function;
+         var screen:Object = param1;
+         var theStage:Stage = param2;
+         super();
+         this._screen = screen;
+         this.background = new Shape();
+         this.background.graphics.beginFill(3368601);
+         this.background.graphics.drawRect(0,0,1980,1174);
+         this.background.graphics.endFill();
+         this.addChild(this.background);
+         tempFunc = this.webViewLoaded(screen);
+         this.webView = new StageWebView();
+         this.webView.addEventListener(Event.COMPLETE,tempFunc);
+         this.webView.addEventListener(MouseEvent.MOUSE_DOWN,function(param1:MouseEvent):*
+         {
+            trace("MOUSE DOWN");
+         });
+         this.webView.addEventListener(MouseEvent.MOUSE_MOVE,function(param1:MouseEvent):*
+         {
+            trace("MOUSE MOVED");
+         });
+         this.webView.addEventListener(MouseEvent.MOUSE_UP,function(param1:MouseEvent):*
+         {
+            trace("MOUSE UP ");
+         });
+         this.webView.addEventListener(LocationChangeEvent.LOCATION_CHANGING,this.preventURLChange);
+         this.webView.stage = theStage;
+         this.webView.viewPort = new Rectangle(1920,2064,898.56,981);
+         this.webView.loadURL(File.applicationDirectory.nativePath + "/assets/map/map.html");
+      }
+      
+      private function webViewLoaded(param1:Object) : Function
+      {
+         var sc:Object = param1;
+         return function(param1:Event):void
+         {
+            var _loc6_:* = undefined;
+            var _loc7_:* = undefined;
+            var _loc8_:* = undefined;
+            var _loc9_:* = undefined;
+            var _loc10_:* = undefined;
+            var _loc11_:* = undefined;
+            var _loc12_:* = undefined;
+            var _loc13_:* = undefined;
+            var _loc14_:* = undefined;
+            var _loc15_:* = undefined;
+            var _loc16_:* = undefined;
+            var _loc17_:* = undefined;
+            var _loc18_:* = undefined;
+            var _loc19_:* = undefined;
+            var _loc2_:* = sc.regions[0].mapboxAccessToken;
+            var _loc3_:* = sc.regions[0].mapboxStyleURL;
+            var _loc4_:* = "javascript:loadMap(\'" + _loc2_ + "\', \'" + _loc3_ + "\')";
+            webView.loadURL(_loc4_);
+            var _loc5_:* = 0;
+            while(_loc5_ < sc.regions[0].hotspots.length)
+            {
+               _loc8_ = (_loc7_ = (_loc6_ = sc.regions[0].hotspots[_loc5_].title).replace(/"/g,"&quot")).replace(/'/g,"&#039");
+               _loc12_ = 0;
+               while(_loc12_ < sc.regions[0].hotspots[_loc5_].regions.length)
+               {
+                  if(sc.regions[0].hotspots[_loc5_].regions[_loc12_].type == "media")
+                  {
+                     _loc11_ = sc.regions[0].hotspots[_loc5_].regions[_loc12_].assetMedia._1500w.url;
+                     _loc10_ = sc.regions[0].hotspots[_loc5_].regions[_loc12_].acknowledgement;
+                  }
+                  else if(sc.regions[0].hotspots[_loc5_].regions[_loc12_].type == "text")
+                  {
+                     _loc9_ = (_loc19_ = (_loc18_ = sc.regions[0].hotspots[_loc5_].regions[_loc12_].text).replace(/\"/g,"&quot;")).replace(/\'/g,"&#039;");
+                  }
+                  _loc12_++;
+               }
+               trace("\t\t\t\t\t\t\t\tImage caption = " + _loc10_);
+               if(_loc10_ == undefined)
+               {
+                  _loc10_ = "";
+               }
+               _loc13_ = "javascript:addMarker(" + _loc5_ + ", " + sc.regions[0].hotspots[_loc5_].latitude + ", " + sc.regions[0].hotspots[_loc5_].longitude + ")";
+               _loc14_ = "javascript:addImage(" + _loc5_ + ", \'" + _loc11_ + "\')";
+               _loc15_ = "javascript:addTitle(" + _loc5_ + ", \'" + _loc8_ + "\')";
+               _loc16_ = "javascript:addInfo(" + _loc5_ + ", \'" + _loc9_ + "\')";
+               _loc17_ = "javascript:addCaption(" + _loc5_ + ", \'" + _loc10_ + "\')";
+               webView.loadURL(_loc13_);
+               webView.loadURL(_loc14_);
+               webView.loadURL(_loc15_);
+               webView.loadURL(_loc16_);
+               webView.loadURL(_loc17_);
+               _loc5_++;
+            }
+         };
+      }
+      
+      private function preventURLChange(param1:LocationChangeEvent) : void
+      {
+         param1.preventDefault();
+         this.dispatchEvent(new Event(MapSlide.PERSON_INTERACTING));
+      }
+      
+      public function get type() : String
+      {
+         return this._slideType;
+      }
+      
+      public function reset() : void
+      {
+         trace("RESET MAP TO CENTER BOUNDS OVER HOT SPOTS");
+         this.webView.loadURL("javascript:reset()");
+      }
+      
+      public function show() : void
+      {
+         this.reset();
+         this.webView.viewPort = new Rectangle(1920 - 898.56,0,898.56,980);
+         this.webView.addEventListener(MouseEvent.MOUSE_MOVE,function(param1:MouseEvent):*
+         {
+            trace("MOUSEMOVE");
+         });
+      }
+      
+      public function hide() : void
+      {
+         this.webView.viewPort = new Rectangle(1920,0,898.56,981);
+         setTimeout(function():*
+         {
+            reset();
+         },300);
+      }
+   }
+}
