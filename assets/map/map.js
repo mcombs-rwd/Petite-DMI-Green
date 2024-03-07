@@ -1,9 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', loadMap);
+
+function loadMap() {
   /**
    * Hides info-containers and makes markers clickable.
    */
   popups = document.querySelectorAll('.info-container')
   markers = document.querySelectorAll('.marker');
+  // Hide info-containers, give unique ID based on title
+  var title = "";
   var titles = [];
   popups.forEach((popup) => {
     popup.className = "info-container hide";
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     titles.push(title);
   })
   console.log("Popups: ", titles);
+  // Give markers click function to corresponding info-container
   var n = 0;
   markers.forEach((marker) => {
     marker.id = "click-" + titles[n];
@@ -22,8 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("Marker call: %s", functionCall);
     n++;
   })
-});
-
+  // Test operation by showing each info-container
+  popups.forEach((popup) => {
+    popup.className = "info-container";
+  })
+  return true;
+}
 function toggleInfo(event) {
   console.log("Toggling %s", event);
   if (document.getElementById(event).className.includes("hide")) {
@@ -31,6 +40,21 @@ function toggleInfo(event) {
   } else {
     document.getElementById(event).className = "info-container hide";
   };
+  closeAll();
+}
+
+function closeAll() {
+  // Called when close is clicked on any popup
+  popups = document.querySelectorAll('.info-container')
+  popups.forEach((popup) => {
+    closeInfo(popup);
+  })
+}
+
+function closeInfo(popup) {
+  // Possibly called by SWF app
+  console.log("Closing %s", popup.id);
+  popup.className = "info-container hide";
 }
 
 // // Unused
@@ -51,44 +75,44 @@ function toggleInfo(event) {
 
 
 // ALL FUNCTIONS BELOW ARE REQUIRED BY ORIGINAL AIR APP, MANY ARE NOT IMPLEMENTED
-function addMarker(mark, lat, lng) {}
+// function addMarker(mark, lat, lng) {}
 
-function sendActive() {
-  document.location = '?moved=true';
-}
+// function sendActive() {
+//   document.location = '?moved=true';
+// }
 
-function centerToMarker(mLat, mLong) {}
+// function centerToMarker(mLat, mLong) {}
 
-function closeInfo(ev) {
-  ev.target.parentElement.parentElement.parentElement.className =
-    'info-container hide';
-}
+// function closeInfo(ev) {
+//   ev.target.parentElement.parentElement.parentElement.className =
+//     'info-container hide';
+// }
 
-function reset() {
-  popups.forEach((container) => {
-    container.className = 'info-container hide';
-  });
-}
+// function reset() {
+//   popups.forEach((container) => {
+//     container.className = 'info-container hide';
+//   });
+// }
 
-function fixInfoBox(m) {}
+// function fixInfoBox(m) {}
 
-function addImage(mark, img) {}
+// function addImage(mark, img) {}
 
-function addTitle(mark, title) {}
+// function addTitle(mark, title) {}
 
-function addInfo(mark, inform) {}
+// function addInfo(mark, inform) {}
 
-function selectMarker() {}
+// function selectMarker() {}
 
-function createObjectURL(object) {}
+// function createObjectURL(object) {}
 
-function loadMap(token, style) {
-  document.addEventListener('mousemove', sendActive);
-  addOpenFunction();
-}
+// // function loadMap(token, style) {
+// //   document.addEventListener('mousemove', sendActive);
+// //   addOpenFunction();
+// // }
 
-function removeMarker() {}
+// function removeMarker() {}
 
-function getLat() {}
+// function getLat() {}
 
-function getLng() {}
+// function getLng() {}
