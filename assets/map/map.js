@@ -27,12 +27,8 @@ function loadMap() {
     console.log("Marker call: %s", functionCall);
     n++;
   })
-  // Test operation by showing each info-container
-  popups.forEach((popup) => {
-    popup.className = "info-container";
-  })
-  return true;
 }
+
 function toggleInfo(event) {
   console.log("Toggling %s", event);
   if (document.getElementById(event).className.includes("hide")) {
@@ -40,7 +36,10 @@ function toggleInfo(event) {
   } else {
     document.getElementById(event).className = "info-container hide";
   };
-  closeAll();
+  popups = document.querySelectorAll('.info-container')
+  popups.forEach((popup) => {
+    if(popup.id !== event) { closeInfo(popup); }
+  })
 }
 
 function closeAll() {
