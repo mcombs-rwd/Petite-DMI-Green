@@ -32,20 +32,18 @@ body {
 }
 
 .info-container {
-  /* IMPORTANT: Size for text */
   /* TODO: Animate open/close */
   position: fixed;
   width: 40vw;
   left: 50%;
   margin-left: -40vw;
-  height: 40vh;
+  height: 56vh;
   top: 50%;
   margin-top: -40vh;
   z-index: 10;
   display: none;
   background-color: #edeae6;
   border-radius: 10px;
-  border: 1px solid red;
 }
 
 .info-pin input[type="radio"]:checked ~ .info-container {
@@ -116,4 +114,3 @@ h3 {
   top: 50%;
   transform: translateY(-50%);
 }
-
