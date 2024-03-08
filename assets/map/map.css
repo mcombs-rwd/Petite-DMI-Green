@@ -21,6 +21,7 @@ body {
 }
 
 .info-pin {
+  /* IMPORTANT: Hide radio, show marker img */
   position: absolute;
   width: 20px;
   height: 20px;
@@ -31,6 +32,8 @@ body {
 }
 
 .info-container {
+  /* IMPORTANT: Size for text */
+  /* TODO: Animate open/close */
   position: fixed;
   width: 40vw;
   left: 50%;
@@ -101,13 +104,13 @@ body {
   text-align: center;
 }
 
-.info-title {
+h3, .info-title {
   position: relative;
   height: auto;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .info-description {
