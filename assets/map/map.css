@@ -26,6 +26,7 @@ body {
   width: 20px;
   margin-left: -10px;
   margin-top: -10px;
+  z-index: 5;
 }
 
 .info-pin input {
@@ -46,7 +47,7 @@ body {
   width: 40vw;
   left: 50%;
   margin-left: -40vw;
-  height: 56vh;
+  height: auto;
   top: 50%;
   margin-top: -40vh;
   z-index: 10;
@@ -83,8 +84,8 @@ h3 {
   position: relative;
   height: auto;
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 1.5rem;
 }
 
@@ -110,7 +111,8 @@ h3 {
 
 label.close-button {
   margin-top: 1rem;
-  width: 20rem;
+  margin-bottom: 1rem;
+  width: 100%;
   background: transparent;
   text-align: center;
 }
